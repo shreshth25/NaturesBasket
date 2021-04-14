@@ -1,0 +1,50 @@
+@extends('admin.layout')
+@section('content')
+<div class="col-12">
+    <div class="card card-success">
+      <div class="card-header">
+        <span class="card-title my-auto">Categories</span>
+        <a href="{{route('category.create')}}" class="btn btn-warning float-right">Add</a>
+      </div>
+      <div class="card-body">
+        <table id="category_table" class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th>S.no</th>
+            <th>Slug</th>
+            <th>Display name</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+              @foreach ($categoriesData as $item)
+              <tr>
+                <td>{{$loop->iteration}}</td>
+                <td>{{$item->slug}}</td>
+                <td>{{$item->display_name}}</td>
+                <td><a href="{{route('category.edit',$item->id)}}"><i class="fa fa-edit" style="font-size:20px;"></i></a></td>
+              </tr>
+              @endforeach
+
+        </table>
+      </div>
+    </div>
+</div>
+@endsection
+
+
+@section('scripts')
+<script>
+      $(function () {
+        $('#category_table').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true,
+            "responsive": true,
+            });
+  });
+</script>
+@endsection

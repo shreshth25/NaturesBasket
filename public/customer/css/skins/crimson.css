@@ -1,0 +1,43 @@
+.features-section .features-item:hover,
+.mybtn2,
+.header,
+.footer-section {
+    background-color: #2E8B57;
+
+}
+.products-section .owl-carousel .owl-nav button.owl-next,
+.products-section .owl-carousel .owl-nav button.owl-prev,
+.home-section,
+.testimonial-section::before,
+.newsletter-section::before {
+    background-color:#2E8B57 ;
+  }
+
+ .section-title .title::before .section-title .title  .mybtn1{
+      color:#2E8B57
+  } 
+
+
+  .about-section .about-content ul li i{
+      color:#2E8B57 ;
+  }  
+.features-section .features-item .icon i{
+    color:#2E8B57
+}
+.footer-section .footer-social-links a i:hover,
+.contact-section .contact-item h5,
+.contact-section .contact-item .icon i,
+.contact-section .contact-form .form-control:focus,
+.faq-section .support-text a,
+.testimonial-section .owl-carousel .owl-nav button.owl-next,
+.testimonial-section .owl-carousel .owl-nav button.owl-prev,
+.testimonial-section .client-info h5,
+.products-section .product-content .product-price .new-price,
+.section-title{
+    color: #2E8B57;
+}
+
+.contact-section .contact-form .form-control:focus,
+.testimonial-section .client-info img{
+    border-color:#2E8B57 ;
+}
