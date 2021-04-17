@@ -85,6 +85,17 @@
             'pdfHtml5'
         ],
     } );
+
+
+    $('#update').on('click',function(e){
+        e.preventDefault();
+        data={
+            "status":$('#status').val(),
+            "status_message":$('#status_text').val()
+        };
+        console.log(data);
+    })
 } );
+
 </script>
 @endsection

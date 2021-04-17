@@ -9,19 +9,19 @@
         </div>
         <div class="modal-body">
             <label>Select the status</label>
-          <select class="form-control">
-              <option value="-1">Not Placed</option>
-              <option value="-1">Not Placed</option>
-              <option value="-1">Not Placed</option>
-              <option value="-1">Not Placed</option>
-              <option value="-1">Not Placed</option>
+          <select class="form-control" name="status" id="status">
+              <option value="-1">Order Placed</option>
+              <option value="0">Packing</option>
+              <option value="1">On Way</option>
+              <option value="2">Deliverd</option>
+              <option value="3">Canceled</option>
           </select>
           <label>Select the status</label>
-          <input class="form-control mt-2" placeholder="Enter the status">
+          <input class="form-control mt-2" name="status_text" id="status_text" placeholder="Enter the status">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-primary" id="update">Update</button>
         </div>
       </div>
     </div>
