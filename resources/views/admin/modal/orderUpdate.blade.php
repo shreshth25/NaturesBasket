@@ -18,6 +18,7 @@
           </select>
           <label>Select the status</label>
           <input class="form-control mt-2" name="status_text" id="status_text" placeholder="Enter the status">
+          <input type="hidden" id="status_id">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

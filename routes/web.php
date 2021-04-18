@@ -100,6 +100,7 @@ Route::prefix('admin')->middleware('auth','admin')->group(function () {
 
     Route::prefix('orders')->group(function(){
         Route::get('/',[OrderController::class,'index'])->name('admin.orders');
+        Route::post('/update',[OrderController::class,'update'])->name('admin.orders.update');
     });
 
 

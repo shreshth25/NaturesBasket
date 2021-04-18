@@ -61,7 +61,7 @@
                                 </tbody>
                             </table>
                         </td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <td><button type="button" data-id="{{$item->id}}" class="btn btn-primary updateModal" data-toggle="modal" data-target="#exampleModal">
                             update
                           </button></td>
                     </tr>
@@ -86,14 +86,28 @@
         ],
     } );
 
+    $('.updateModal').on('click',function(e){
+        var instance = $(this);
+        var action = instance.data("id");
+        $('#status_id').val(action);
+    });
 
     $('#update').on('click',function(e){
         e.preventDefault();
         data={
             "status":$('#status').val(),
-            "status_message":$('#status_text').val()
+            "status_text":$('#status_text').val(),
+            "_token":'{{csrf_token()}}',
+            "id":$('#status_id').val()
         };
-        console.log(data);
+        $.ajax({
+            type: "POST",
+            url: "{{route('admin.orders.update')}}",
+            data: data,
+            success: function (response) {
+                console.log(response)
+            }
+        });
     })
 } );
 

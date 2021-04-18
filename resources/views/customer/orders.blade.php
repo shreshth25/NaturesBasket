@@ -20,6 +20,7 @@
                         <th scope="col">S no</th>
                         <th scope="col">Order id</th>
                         <th scope="col">Info</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,6 +65,11 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width:{{$item->status*25}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
                             </td>
                         </tr>
                     @endforeach

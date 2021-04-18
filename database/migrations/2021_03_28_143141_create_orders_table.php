@@ -18,6 +18,8 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id');
             $table->uuid('order_id');
             $table->longText('cart_data');
+            $table->longText('status_text');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }
